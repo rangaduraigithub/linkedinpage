@@ -1,0 +1,689 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <!-- <link rel="stylesheet" href="stylelinkedin.css"/> -->
+      <style>
+        *{
+    margin:0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(222, 234, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction:column;
+
+}
+@media screen and (max-width-768){
+    .container{
+        flex-direction:column;
+    }
+
+}
+.header_left img{
+    object-fit:contain;
+    height: 40px;
+    margin-right: 10px;
+}
+.header{
+    width: 100%;
+    position: sticky;
+    display: flex;
+    top: 0;
+    z-index: 999;
+    justify-content: space-evenly;
+    border-bottom: 0.1px solid lightgray;
+    padding: 10px;
+    background-color: white;
+}
+.header_left{
+    display: flex;
+}
+.header_right{
+    display: flex;
+}
+.header_search{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 22px;
+    color: gray;
+    background-color: rgba(230, 219, 219, 0.856);
+}
+.header_search input{
+    border: none;
+    background:none;
+    outline:none;
+
+}
+.headerOption{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-right: 20px;
+    color:gray;
+    cursor:pointer;
+}
+.headerOption:hover{
+    color: black;
+}
+.headerOption h3{
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.headerOption icon{
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+/* .sidebar_top img{
+    object-fit: contain;
+   
+    
+} */
+/* main body */
+.body_main{
+    display: flex;
+    margin-top:20px ;
+    max-width: 1200px;
+    margin: 0px;
+
+    margin-left: 30px;
+
+    
+}
+/* sidebar */
+.sidebar{
+    position: sticky;
+    top: 80px;
+    flex:0.2;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+
+}
+.sidebar_top img{ 
+    margin-bottom:-20px;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+}
+.propic img{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius:50px;
+    border-bottom-right-radius: 50px;
+}
+.sidebar_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+}
+.sidebar_stats{
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+.sidebar_stat{
+    margin-top: 10px;
+    display:flex;
+    text-align: left;
+    justify-content:space-between;
+} 
+.icon_event{
+    text-align: left;
+}
+.sidebar_stat h4{
+     text-align:left ;
+}
+.sidebar_connum{
+    font-weight: bold;
+    color:teal
+
+}
+.sidebar_bottom{
+    text-align: left;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+/* feed section */
+.feed{
+    flex: 0.6;
+    margin: 0 20px;
+   
+}
+.feed_inputContainer{
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+.feed_input{
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    display: flex;
+    padding: 10px;
+    color:gray;
+    padding-left: 15px; 
+    background-color:ghostwhite; 
+
+} 
+.feed_input form{
+    
+     /* border: none;
+    background:none;
+    outline:none; */
+    width: 100%;
+    flex:1;
+    margin-left: 10px; 
+    display:flex;
+
+
+}
+.feed_inputOptions{
+     display: flex;
+    justify-content: space-evenly;
+}
+.inputOption{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: gray;
+    padding: 10px;
+    cursor: pointer;
+    }
+ .inputOption:hover {
+     background-color:whitesmoke;
+     border-radius: 5px;
+
+ }   
+
+ /* post */
+ .post{
+     background-color: white;
+     padding: 15px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+ }
+ .post_header{
+     display: flex;
+     margin-bottom: 10px;
+ }
+ .post_info{
+     margin-left: 10px;
+ }
+.post_info p{
+    font-size: 12px;
+    color:gray;
+}
+.post_info h2{
+    font-size: 15px;
+}
+.widgets{
+    position: sticky;
+    top:80px;
+    flex:0.2;
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid lightgray;
+    height: fit-content;
+    padding-bottom:10px;
+}.widgets_header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:10px;
+}
+.widgets_header h2{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.widgets_article{
+display: flex;
+padding:10px;
+cursor:pointer;
+}
+.widgets_article:hover{
+    background-color: whitesmoke;
+}
+.widgets_articleleft{
+    color: teal;
+    
+}
+.widgets_articleleft .material-icons{
+    font-size: 15px;
+
+}
+.widgets_articleright{
+    flex:1;
+
+}
+.widgets_articleright h2{
+    font-size: 14px;
+}
+.widgets_articleright p{
+    font-size: 12px;
+    color:gray
+}
+
+
+        </style>
+
+    <title>Linkedin</title>
+</head>
+<body>
+  <div class="container">
+  <!--navBar Starts-->
+  <div class="header">
+      <div class="header_left">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png" alt="">
+       <div class="header_search">
+        <i class="material-icons">search</i>
+        <form><input type="text">Search</form>
+       </div>
+      </div>
+      <div class="header_right">
+          <div class="headerOption">
+            <i class="material-icons headerOption_icon">
+              house
+            </i>
+            <h3>Home</h3>
+          </div>
+
+          
+          <div class="headerOption">
+            <i class="material-icons headerOption_icon">people</i>
+            <h3>My Network</h3>
+          </div> 
+
+           <div class="headerOption">
+            <i class="material-icons headerOption_icon">business_center </i>
+            <h3>Jobs</h3>
+          </div>
+
+          <div class="headerOption">
+            <i class="material-icons headerOption_icon">chat </i>  
+            <h3>Messaging</h3>
+          </div>
+
+          <div class="headerOption">
+            <i class="material-icons headerOption_icon">
+                notifications
+            </i>              
+            <h3>Notifications</h3>
+          </div> 
+          <div class="headerOption">
+            <i class="material-icons headerOption_icon">
+                account_circle
+            </i>
+            <h3>Me</h3>
+          </div> 
+  </div>
+  </div>
+  <!--navBar Ends-->
+  <!-- body starts -->
+    <div class="body_main">
+        <!-- sidebar starts -->
+        <div class="sidebar">
+        <div class="sidebar_top">
+         <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mjd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="">
+        <div class="propic">  <img src="https://media-exp1.licdn.com/dms/image/C5603AQH79McwtJ0E0Q/profile-displayphoto-shrink_800_800/0/1627829395111?e=1634169600&v=beta&t=EasaPP031ssXtFVYZvf_1Jy1kLjmLHU6WP-lYaPGwHg" height="200px" width="200px" alt=""> 
+        </div>
+        <br>
+        <div><h3> Sri Ranga Durai </h3></div>
+       <p>Talent Community|FrontEnd Developer at SpotKnack-Mission 2021</p>
+        </div>
+           <div class="sidebar_stats">
+            <div class="sidebar_stat">
+              <p>Connection </p>
+              <p class="sidebar_connum">
+                51
+              </p>
+            </div>
+            <div class="sidebar_stat">
+              <p>who viewed your profile </p>
+              <p class="sidebar_connum">
+                22
+              </p>
+            </div>
+            
+            <div class="sidebar_stat">
+              <p>Access exclusive Tools & insights </p>
+            </div>
+             <div class="sidebar_stat"><h4>Try Premium</h4></div>
+            <div class="icon_event">
+              <i class="material-icons">
+                bookmark
+              </i>
+              <h4 >My Events</h4>  
+            </div>
+     </div>
+    
+     <div class="sidebar_bottom">
+       <p>Groups</p>
+       <p>Events</p>
+       <p>Followed hastags</p>
+     </div>
+    </div>
+        <!-- sidebar ends -->
+        <!-- feed starts-->
+        <div class="feed">
+          <div class="feed_inputContainer">
+            <div class="feed_input">
+            <form>
+              <input type="text">Start a post
+            </form>             
+            </div>
+          <div class="feed_inputOptions">
+            <div class="inputOption">
+              <i style="color: rgb(41, 182, 182)" class="material-icons">image</i>
+              <h4>Photo</h4>
+
+            </div>
+            <div class="inputOption">
+              <i style="color: forestgreen"  class="material-icons">
+                slideshow
+              </i>
+                
+              <h4>Video</h4>
+
+            </div>
+            <div class="inputOption">
+              <i style="color: darkorange;"class="material-icons">
+                event
+              </i>
+                
+              <h4>Events</h4>
+
+            </div>
+            <div class="inputOption">
+              <i style="color:red" class="material-icons">
+                edit_note
+              </i>
+                
+              <h4>Write article</h4>
+
+            </div>
+          </div>
+          </div>
+          <!-- post starts -->.
+          <div class="post">
+            
+            <div class="post_header">
+              <i class="material-icons">
+                account_circle
+              </i>
+              <div class="post_info">
+              <h2>Gokul Krishnan</h2>
+              <p>FrontEnd Developer</p>
+              </div>
+            </div>
+            <div class="post_body">
+              <p>Message here</p>
+
+            </div>
+            <div class="feed_inputOptions">
+              <div class="inputOption">
+                <i class="material-icons">
+                  thumb_up_off_alt
+                </i>
+                <h4>Like</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  comment
+                </i>
+                  
+                <h4>Comment</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  share
+                </i>
+                  
+                  
+                <h4>Share</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  send
+                </i>
+                <h4>Send</h4>
+              </div>
+
+            </div>
+          </div>
+          <!-- post ends -->
+            <!-- post starts -->.
+            <div class="post">
+            
+              <div class="post_header">
+                <i class="material-icons">
+                  account_circle
+                </i>
+                <div class="post_info">
+                <h2>Chandru</h2>
+                <p>Job Description</p>
+                </div>
+              </div>
+              <div class="post_body">
+                <p>Message here</p>
+  
+              </div>
+              <div class="feed_inputOptions">
+                <div class="inputOption">
+                  <i class="material-icons">
+                    thumb_up_off_alt
+                  </i>
+                  <h4>Like</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    comment
+                  </i>
+                    
+                  <h4>Comment</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    share
+                  </i>
+                    
+                    
+                  <h4>Share</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    send
+                  </i>
+                  <h4>Send</h4>
+                </div>
+  
+              </div>
+            </div>
+            <!-- post ends -->
+              <!-- post starts -->.
+          <div class="post">
+            
+            <div class="post_header">
+              <i class="material-icons">
+                account_circle
+              </i>
+              <div class="post_info">
+              <h2>Anandh</h2>
+              <p>Job Description</p>
+              </div>
+            </div>
+            <div class="post_body">
+              <p>Message here</p>
+
+            </div>
+            <div class="feed_inputOptions">
+              <div class="inputOption">
+                <i class="material-icons">
+                  thumb_up_off_alt
+                </i>
+                <h4>Like</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  comment
+                </i>
+                  
+                <h4>Comment</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  share
+                </i>
+                  
+                  
+                <h4>Share</h4>
+              </div>
+              <div class="inputOption">
+                <i class="material-icons">
+                  send
+                </i>
+                <h4>Send</h4>
+              </div>
+
+            </div>
+          </div>
+          <!-- post ends -->
+            <!-- post starts -->.
+            <div class="post">
+            
+              <div class="post_header">
+                <i class="material-icons">
+                  account_circle
+                </i>
+                <div class="post_info">
+                <h2>Yogesh</h2>
+                <p>Job Description</p>
+                </div>
+              </div>
+              <div class="post_body">
+                <p>Message here</p>
+  
+              </div>
+              <div class="feed_inputOptions">
+                <div class="inputOption">
+                  <i class="material-icons">
+                    thumb_up_off_alt
+                  </i>
+                  <h4>Like</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    comment
+                  </i>
+                    
+                  <h4>Comment</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    share
+                  </i>
+                    
+                    
+                  <h4>Share</h4>
+                </div>
+                <div class="inputOption">
+                  <i class="material-icons">
+                    send
+                  </i>
+                  <h4>Send</h4>
+                </div>
+  
+              </div>
+            </div>
+            <!-- post ends -->
+        </div>
+       <!--feed ends--> 
+       <!-- widgets starts -->
+       <div class="widgets">
+         <div class="widgets_header">
+           <h3>LinkedIn News</h3>
+           <i class="material-icons">
+            info
+           </i>
+         </div>
+         <div class="widgets_article">
+           <div class="widgets_articleleft">
+            <i class="material-icons">
+              fiber_manual_record
+            </i>
+           </div>
+           <div class="articleright">
+             <h2>Linked job reference</h2>
+             <p>Learning python
+               coronavirus positivecases
+             </p>
+           </div>
+         </div>
+         <div class="widgets_article">
+          <div class="widgets_articleleft">
+           <i class="material-icons">
+             fiber_manual_record
+           </i>
+          </div>
+          <div class="articleright">
+            <h2>Linked job reference</h2>
+            <p>Learning python
+              coronavirus positivecases
+            </p>
+          </div>
+        </div>
+        <div class="widgets_article">
+          <div class="widgets_articleleft">
+           <i class="material-icons">
+             fiber_manual_record
+           </i>
+          </div>
+          <div class="articleright">
+            <h2>Linked job reference</h2>
+            <p>Learning python
+              coronavirus positivecases
+            </p>
+          </div>
+        </div>
+       </div>
+       <!-- widgets ends -->
+    </div>
+  <!-- body ends -->
+  </div>
+</body>
+</html>
